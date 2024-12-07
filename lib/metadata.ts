@@ -71,6 +71,7 @@ export const createMetadata: MetadataGenerator = (
     twitter: {
       card: 'summary_large_image',
       creator: twitterHandle,
+      site: twitterHandle,
     },
     viewport: {
       minimumScale: 1,

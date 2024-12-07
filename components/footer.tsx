@@ -14,8 +14,8 @@ type FooterProps = {
 
 const social = [
   {
-    name: 'Twitter',
-    href: 'https://twitter.com/openjsf',
+    name: 'X',
+    href: 'https://x.com/openjsf',
     icon: TwitterIcon,
   },
   {
