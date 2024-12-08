@@ -19,7 +19,7 @@ const authors: Metadata['authors'] = [
   },
 ];
 const publisher = 'OpenJS Foundation';
-const twitterHandle = '@openjsf';
+const xHandle = '@openjsf';
 
 export const createMetadata: MetadataGenerator = (
   title,
@@ -68,10 +68,10 @@ export const createMetadata: MetadataGenerator = (
       url: new URL(path ?? '/', process.env.NEXT_PUBLIC_SITE_URL).toString(),
     },
     publisher,
-    twitter: {
-      card: 'summary_large_image',
-      creator: twitterHandle,
-      site: twitterHandle,
+    x: {
+      card: 'summary',
+      creator: xHandle,
+      site: xHandle,
     },
     viewport: {
       minimumScale: 1,

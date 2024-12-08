@@ -1,4 +1,4 @@
-import TwitterIcon from './icons/twitter';
+import XIcon from './icons/x';
 import GoogleCalendarIcon from './icons/googleCalendar';
 import LinkedInIcon from './icons/linkedin';
 import type { FC } from 'react';
@@ -16,7 +16,7 @@ const social = [
   {
     name: 'X',
     href: 'https://x.com/openjsf',
-    icon: TwitterIcon,
+    icon: XIcon,
   },
   {
     name: 'LinkedIn',
