@@ -1,6 +1,7 @@
 import TwitterIcon from './icons/twitter';
 import GoogleCalendarIcon from './icons/googleCalendar';
 import LinkedInIcon from './icons/linkedin';
+import XIcon from './icons/x';
 import type { FC } from 'react';
 import type { FilledLinkToWebField } from '@prismicio/types';
 import type { HomeDocumentData, SettingsDocumentData } from '@/prismicio-types';
@@ -14,9 +15,9 @@ type FooterProps = {
 
 const social = [
   {
-    name: 'Twitter',
-    href: 'https://twitter.com/openjsf',
-    icon: TwitterIcon,
+    name: 'X',
+    href: 'https://x.com/openjsf',
+    icon: XIcon,
   },
   {
     name: 'LinkedIn',
