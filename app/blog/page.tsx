@@ -1,4 +1,5 @@
 import React from 'react';
+import { createClient } from '@/lib/prismic';
 import blogYaml from '@/content/blog.json';
 import type { BlogPost } from '@/content/blog.json';
 import Image from 'next/image';
@@ -7,7 +8,13 @@ import ArrowIcon from '@/components/icons/arrow-icon';
 export const fetchCache = 'force-no-store';
 export const revalidate = 0;
 
-const BlogPage = () => {
+const BlogPage = async () => {
+  try {
+    const client = createClient();
+    const { data } = await client.getSingle('blog');
+    console.log(data);
+  } catch {}
+
   return (
     <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
       <div className="mb-12">
@@ -15,7 +22,7 @@ const BlogPage = () => {
           Open Visualization Collaboration Space Blog
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-          Deep dives into the vis.gl frameworks
+          Deep dives into the Open Visualization frameworks and applications
         </p>
         <div className="mx-auto text-base text-gray-600 dark:text-gray-400 space-y-4">
           <p>
@@ -24,7 +31,7 @@ const BlogPage = () => {
             Guest posts are welcome!
           </p>
           <p>
-            Note that vis.gl blog posts can also be browser directly on{' '}
+            Note that many older vis.gl blog posts can also be browsed directly on{' '}
             <a
               href="https://medium.com/@vis.gl"
               className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 underline"
